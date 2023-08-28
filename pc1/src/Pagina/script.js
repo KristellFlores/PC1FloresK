@@ -5,6 +5,7 @@ function calcularPago() {
     const genero = document.querySelector('input[name="genero"]:checked').value;
     const equipos = document.querySelectorAll('input[name="equipo"]:checked');
     const temporadas = parseInt(document.getElementById("temporadas").value);
+    const faltas = document.getElementById("faltas").value; 
 
     let totalEquipos = 0;
     equipos.forEach((equipo) => {
@@ -21,7 +22,8 @@ function calcularPago() {
         Género: ${genero}<br>
         Equipos: ${Array.from(equipos).map((equipo) => equipo.value).join(", ")}<br>
         Temporadas: ${temporadas}<br>
-        Total a pagar: ${totalPagar} soles
+        ¿Ha tenido faltas?: ${faltas}<br>
+        Total a pagar: ${totalPagar.toFixed(2)} soles
     `;
 
     document.getElementById("resultado").innerHTML = resultado;
