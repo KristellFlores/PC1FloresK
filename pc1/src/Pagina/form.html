@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro de Jugadores</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo">REGISTRO DE JUGARODES DE FÚTBOL PERUANO</h1>
+        <div class="form-container">
+            <form id="registroForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="categoria">Categoría:</label>
+                    <select id="categoria">
+                        <option value="sub17">Sub 17</option>
+                        <option value="sub20">Sub 20</option>
+                        <option value="mayores">Mayores</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Género:</label>
+                    <input type="radio" id="masculino" name="genero" value="masculino" required>
+                    <label for="masculino" style="position: static;">Masculino</label> 
+                    <input type="radio" id="femenino" name="genero" value="femenino" required>
+                    <label for="femenino">Femenino</label>
+                </div>
+
+                <div class="form-group" style="margin-top: -10px;">
+                    <label for="equipo">Equipo:</label>
+                    <input type="checkbox" id="u" name="equipo" value="U">
+                    <label for="u" style="margin-right: 10px;">U</label>
+                    <input type="checkbox" id="alianza" name="equipo" value="Alianza">
+                    <label for="alianza" style="margin-right: 10px;">Alianza</label>
+                    <input type="checkbox" id="cristal" name="equipo" value="Cristal">
+                    <label for="cristal" style="margin-right: 10px;">Cristal</label>
+                    <input type="checkbox" id="cienciano" name="equipo" value="Cienciano">
+                    <label for="cienciano" style="margin-right: 10px;">Cienciano</label>
+                    <input type="checkbox" id="otros" name="equipo" value="Otros">
+                    <label for="otros">Otros</label>
+                </div>
+                
+
+                <div class="form-group">
+                    <label for="temporadas">Temporadas (4 max):</label>
+                    <input type="number" id="temporadas" min="1" max="4" required>
+                </div>
+
+                <div class="buttom">
+                    <input type="button" value="Calcular Pago" onclick="calcularPago()">
+                </div>
+            </form>
+        </div>
+
+        <div class="resultado-container">
+            <div id="resultado"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
